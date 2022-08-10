@@ -48,6 +48,17 @@ const Root = () => {
               facilis quam nobis aperiam in placeat, doloremque totam dolore
               voluptas nesciunt voluptatibus!
             </Typography>
+
+            <div>
+              <Grid container spacing={2} justifyContent="center">
+                <Grid item>
+                  <Button variant="contained">See all photos</Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="contained">See my photos</Button>
+                </Grid>
+              </Grid>
+            </div>
           </Container>
         </div>
       </main>
