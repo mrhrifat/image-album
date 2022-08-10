@@ -1,7 +1,20 @@
 import React from "react";
+import {
+  Typography,
+  AppBar,
+  Card,
+  CardContent,
+  CardActions,
+  CardMedia,
+  CssBaseline,
+  Grid,
+  Toolbar,
+  Container,
+  Button,
+} from "@mui/material";
 
 const Root = () => {
-  return <h3>Bismillahir Rahmanir Rahim</h3>;
+  return <></>;
 };
 
 export default Root;
