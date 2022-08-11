@@ -18,6 +18,7 @@ import useStyles from "./styles/style";
 
 const Root = () => {
   const classes = useStyles();
+  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   return (
     <>
@@ -69,26 +70,28 @@ const Root = () => {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9"
-                  title="Image Album"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography variant="h5">Image </Typography>
-                  <Typography variant="subtitle2">
-                    Poluptatem velit commodi non voluptatibus aspernatur
-                    exercitationem fugiat ut alias enim!
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="sm">View</Button>
-                  <Button size="sm">Edit</Button>
-                </CardActions>
-              </Card>
-            </Grid>
+            {cards.map((card) => (
+              <Grid item xs={12} sm={6} md={4}>
+                <Card className={classes.card}>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://images.unsplash.com/photo-1461988320302-91bde64fc8e4?ixid=2yJhcHBfaWQiOjEyMDd9"
+                    title="Image Album"
+                  />
+                  <CardContent className={classes.cardContent}>
+                    <Typography variant="h5">Image </Typography>
+                    <Typography variant="subtitle2">
+                      Poluptatem velit commodi non voluptatibus aspernatur
+                      exercitationem fugiat ut alias enim!
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="sm">View</Button>
+                    <Button size="sm">Edit</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </main>
